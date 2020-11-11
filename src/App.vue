@@ -1,32 +1,156 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <!-- iconos -->
+    <!-- <i class="fab fa-instagram"></i>
+    <i class="fab fa-facebook-square"></i>
+    <i class="fab fa-twitter-square"></i> -->
+    <!-- <i class="fas fa-hand-holding-usd"></i> -->
+    <!-- <i class="far fa-futbol"></i> -->
+    <!-- <i class="far fa-calendar-alt"></i> -->
+<!-- 
+    PALETA DE COLORES
+    -VERDE=#409921
+    -AZUL=#2c3e50
+    -GRIS=#7A7A7A 
+    -NEGRO=#000000  -->
+    <div id="envoltorio">
+      <header>
+        <h1>Titulo</h1>
+      </header>
+      <Nav></Nav>
+      <main class="main-view">
+        <b-container>
+        <router-view/>
+        </b-container>
+      </main>
+      <footer>
+        <section id="contact">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-facebook-square"></i></li>
+            <li><i class="fab fa-twitter-square"></i></li>
+           
+          </ul>
+        </section>
+        <section id="teamInfo">
+          <a href="#" class="left">Tlf: 1123884217 </a>
+          <a href="#">Email: yennyfergf03@gmail.com</a>
+        </section>
+      </footer>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+import Nav from  '@/components/Nav.vue'
+
+
+export default {
+  name:'App',
+  components:{
+    Nav,
+  }
+
+}
+</script>>
+
 <style lang="scss">
+body{
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  // color: #0F5189 ;
+  margin: 0;
+  padding: 0;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+#envoltorio {
+  margin: 0;
+  padding: 0;
+   width: 100%;
+   height: 100vh;
+    
+    header{
+      background-color:#2E7D32;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      margin:0;
+      // position: sticky;
+      // top: 0;
+      h1{
+        margin: 0;
+        padding: 0;
+      }
+       .btn-menu{
+        color:white;
+        font-size: 30px;
+        position: absolute;
+        top:7px;
+        left: 10px;
+      }
     }
-  }
+    Nav{
+      margin: 0;
+      padding: 0; 
+    }
+    main{
+      // height: 400px;
+      width: 100%;
+    }
+    footer{
+      section{
+        border-top: 0.5px solid #7A7A7A;
+        color: #2E7D32;
+
+         &#contact{
+               h3{
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                  }
+                ul{
+                  margin: 2px;
+                  padding: 0;
+                  margin-left: 0px;
+                  display: flex;
+                  justify-content: center;
+                  li{
+                    padding: 2px;
+                    list-style:none;
+                    font-size: 40px;
+                  }
+                }
+            }
+      
+      &#teamInfo{
+        display: flex;
+        justify-content: center;
+         a{
+           text-decoration: none;
+           color: #7A7A7A;
+           margin-top: 5px;
+           
+           &.left{
+           border-right: 1px solid #7A7A7A;
+           margin-right: 5px;
+           padding-right: 5px;;
+         }
+           
+         }
+         
+      }
+    }
+
+      }
+     
+
 }
 </style>
+
