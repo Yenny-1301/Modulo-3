@@ -11,8 +11,6 @@
             class="mb-2"
         >
             <b-card-text>{{text}}</b-card-text>
-
-            <b-button :href="bSrc" variant="success">More Information</b-button>
         </b-card>
         </div>
        

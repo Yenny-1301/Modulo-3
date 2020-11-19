@@ -4,9 +4,9 @@
        <Carrusel 
         :titulo ="element.titulo"
         :srcPadre="element.imgSrc"
-         :text="element.description"
+        :text="element.description"
         :bSrc="element.btnSrc"
-        ></Carrusel>
+        />
     </div>
   </div>
 </template>

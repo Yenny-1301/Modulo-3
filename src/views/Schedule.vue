@@ -1,187 +1,126 @@
 <template>
   <div class="schedule">
-   <Acordeon />
+    <Options />
+    <div v-for="(object,index) of gameInfo" :key="index">
+   <Acordeon 
+   :date="object.day"
+   :month="object.month"
+    :team1A="object.team1A"
+   :team2A="object.team2A"
+   :locationA="object.locationA"
+   :team1B="object.team1B"
+   :team2B="object.team2B"
+   :locationB="object.locationB"
+  />
+    </div>
   </div>
+
+
 </template>
 
 <script>
 // @ is an alias to /src
 import Acordeon from '@/components/Acordeon.vue'
+import Options from '@/components/Options.vue'
 
 export default {
   name: 'Schedule',
   data: function(){
     return{
       gameInfo:[
-        {
-          september:{
-            one:{
-              info:{
+                {
                 day:"9/01",
-                teamOne:{
-                  team1:"U1",
-                  team2:"U4",
-                  location:"AJ Katzenmaier",
-                  times:"9:30 a.m."
+                month:"september",
+                team1A:"U1",
+                team2A:"U4",
+                locationA:"AJ Katzenmaier",
+                team1B:"U3 ",
+                team2B:" U2",
+                locationB:"Greenbay "
                 },
-                teamTwo:{
-                  team1:"U3 ",
-                  team2:" U2",
-                  location:"Greenbay ",
-                  times:"1:00 p.m"
-                }
-
-              }
-            },
-            two:{
-            info:{
+                {
                 day:"9/08",
-                teamOne:{
-                  team1:"U5",
-                  team2:"U6",
-                  location:"Howard A Yeager",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U6",
-                  team2:" U1",
-                  location:"Marjorie P HartGreenbay ",
-                  times:"1:00 p.m"
-                }
-
-              }
-
-            },
-            three:{
-              info:{
+                month:"september",
+                team1A:"U5",
+                team2A:"U6",
+                locationA:"Howard A Yeager",
+                team1B:"U6",
+                team2B:" U1",
+                locationB:"Marjorie P HartGreenbay "
+                 },
+                 {
                 day:"9/15",
-                teamOne:{
-                  team1:"U2",
-                  team2:"U4",
-                  location:"North",
-                  times:"9:30 a.m."
+                month:"september",
+                team1A:"U2",
+                team2A:"U4",
+                locationA:"North",
+                team1B:"U3",
+                team2B:" U5",
+                locationB:"AJ Katzenmaier"
                 },
-                teamTwo:{
-                  team1:"U3",
-                  team2:" U5",
-                  location:"AJ Katzenmaier",
-                  times:"1:00 p.m"
-                }
-
-              }
-
-            },
-            four:{
-               info:{
+                {
                 day:"9/22",
-                teamOne:{
-                  team1:"U1",
-                  team2:"U3",
-                  location:"South",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U2",
-                  team2:" U6",
-                  location:"Howard A Yeager",
-                  times:"1:00 p.m"
-                }
-              }
+                month:"september",
+                  team1A:"U1",
+                  team2A:"U3",
+                  locationA:"South",
+                  team1B:"U2",
+                  team2B:" U6",
+                  locationB:"Howard A Yeager"
             },
-            five:{
-              info:{
+            {
                 day:"9/29",
-                teamOne:{
-                 team1:"U4",
-                  team2:" U5",
-                  location:"Greenbay ",
-                  times:"1:00 p.m"
-                },
-              }
-            }
-          },
-          october:{
-             one:{
-              info:{
+                month:"september",
+                 team1A:"U4",
+                  team2A:" U5",
+                  locationA:"Greenbay "
+            },
+            {
                 day:"10/06",
-                teamOne:{
-                  team1:"U2",
-                  team2:"U5",
-                  location:"Marjorie P Hart",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U1",
-                  team2:" U6",
-                  location:"South",
-                  times:"1:00 p.m"
-                }
-
-              }
+                month:"october",
+                  team1A:"U2",
+                  team2A:"U5",
+                  locationA:"Marjorie P Hart",
+                  team1B:"U1",
+                  team2B:" U6",
+                  locationB:"South"
             },
-            two:{
-            info:{
+            {
                 day:"10/13",
-                teamOne:{
-                  team1:"U3",
-                  team2:"U4",
-                  location:"Howard A Yeager",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U5",
-                  team2:" U1",
-                  location:"Greenbay",
-                  times:"1:00 p.m"
-                }
-
-              }
-
+                month:"october",
+                  team1A:"U3",
+                  team2A:"U4",
+                  locationA:"Howard A Yeager",
+                  team1B:"U5",
+                  team2B:" U1",
+                  locationB:"Greenbay"
             },
-            three:{
-              info:{
+            {
                 day:"10/20",
-                teamOne:{
-                  team1:"U6",
-                  team2:"U3",
-                  location:"North",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U2",
-                  team2:" U4",
-                  location:"Marjorie P Hart",
-                  times:"1:00 p.m"
-                }
-
-              }
-
+                month:"october",
+                  team1A:"U6",
+                  team2A:"U3",
+                  locationA:"North",
+                  team1B:"U2",
+                  team2B:" U4",
+                  locationB:"Marjorie P Hart"
             },
-            four:{
-               info:{
+            {
                 day:"10/27",
-                teamOne:{
-                  team1:"U3",
-                  team2:"U1",
-                  location:"AJ Katzenmaier",
-                  times:"9:30 a.m."
-                },
-                teamTwo:{
-                  team1:"U5",
-                  team2:" U6",
-                  location:"Howard A Yeager",
-                  times:"1:00 p.m"
-                }
-              }
+                month:"october",
+                  team1A:"U3",
+                  team2A:"U1",
+                  locationA:"AJ Katzenmaier",
+                  team1B:"U5",
+                  team2B:" U6",
+                  locationB:"Howard A Yeager"
             }
-
-          }
-        }
       ]
     }
   },
   components:{
-    Acordeon
+    Acordeon,
+    Options
   }
 }
 </script>

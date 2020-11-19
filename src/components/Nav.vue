@@ -89,6 +89,9 @@ export default {
       a{
       color: white;
       text-decoration: none;
+      &.router-link-exact-active{
+        color:#9CC99F ;
+      }
       }
       
     }

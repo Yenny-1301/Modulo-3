@@ -19,7 +19,7 @@
       </header>
       <Nav></Nav>
       <main class="main-view">
-        <b-container>
+        <b-container fluid>
         <router-view/>
         </b-container>
       </main>
@@ -34,8 +34,8 @@
           </ul>
         </section>
         <section id="teamInfo">
-          <a href="#" class="left">Tlf: 1123884217 </a>
-          <a href="#">Email: yennyfergf03@gmail.com</a>
+          <a href="#" class="left">Tlf: 1124564275 </a>
+          <a href="#">Email: nysl@chisoccer.org</a>
         </section>
       </footer>
     </div>
@@ -44,12 +44,18 @@
 
 <script>
 import Nav from  '@/components/Nav.vue'
-
+import {mapMutations} from 'vuex'
 
 export default {
   name:'App',
   components:{
     Nav,
+  },
+  methods:{
+    ...mapMutations(['listenUser'])
+  },
+  beforeMount(){
+    this.listenUser()
   }
 
 }
