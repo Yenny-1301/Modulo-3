@@ -1,21 +1,11 @@
 <template>
   <div id="app">
-    <!-- iconos -->
-    <!-- <i class="fab fa-instagram"></i>
-    <i class="fab fa-facebook-square"></i>
-    <i class="fab fa-twitter-square"></i> -->
-    <!-- <i class="fas fa-hand-holding-usd"></i> -->
-    <!-- <i class="far fa-futbol"></i> -->
-    <!-- <i class="far fa-calendar-alt"></i> -->
-<!-- 
-    PALETA DE COLORES
-    -VERDE=#409921
-    -AZUL=#2c3e50
-    -GRIS=#7A7A7A 
-    -NEGRO=#000000  -->
     <div id="envoltorio">
-      <header>
+      <header >
         <h1>Titulo</h1>
+        <template v-if="usuario!=null" >
+          <img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle">
+        </template>
       </header>
       <Nav></Nav>
       <main class="main-view">
@@ -44,7 +34,7 @@
 
 <script>
 import Nav from  '@/components/Nav.vue'
-import {mapMutations} from 'vuex'
+import {mapMutations, mapState} from 'vuex'
 
 export default {
   name:'App',
@@ -56,6 +46,9 @@ export default {
   },
   beforeMount(){
     this.listenUser()
+  },
+  computed:{
+    ...mapState(['usuario'])
   }
 
 }
@@ -83,13 +76,12 @@ body{
    height: 100vh;
     
     header{
-      background-color:#2E7D32;
+      width: 100%;
+      background: linear-gradient(to right, #2E7D32, #004983);
       color: white;
       font-size: 20px;
       text-align: center;
       margin:0;
-      // position: sticky;
-      // top: 0;
       h1{
         margin: 0;
         padding: 0;
@@ -101,6 +93,14 @@ body{
         top:7px;
         left: 10px;
       }
+      img{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top:10px;
+        right: 10px;
+      }
+
     }
     Nav{
       margin: 0;
@@ -109,6 +109,7 @@ body{
     main{
       // height: 400px;
       width: 100%;
+      // height: 75vh;
     }
     footer{
       section{
@@ -158,5 +159,6 @@ body{
      
 
 }
+
 </style>
 

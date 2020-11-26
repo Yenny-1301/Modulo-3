@@ -7,7 +7,7 @@
         <!-- <i class="fas fa-user icono"></i> -->
         </b-col>
       <b-col cols="12">
-        <b-button variant="success" @click="logIn()">Login with google</b-button>
+        <b-button class="b-gradient" @click="logIn()">Login with Google</b-button>
       </b-col>
     </template>
     <template v-else>
@@ -18,7 +18,7 @@
         <!-- <i class="fas fa-user icono"></i> -->
        </b-col>
       <b-col cols="12">
-        <b-button variant="success" @click="logOut()">Longout</b-button>
+        <b-button class="b-gradient" @click="logOut()">Longout</b-button>
       </b-col>
     </template>
 
@@ -80,5 +80,8 @@ img{
 .nulluser{
   width: 100px;
   height: 100px;
+}
+.b-gradient{
+      background: linear-gradient(to right, #2E7D32, #005EA9);
 }
 </style>
