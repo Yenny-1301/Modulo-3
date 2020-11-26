@@ -98,7 +98,7 @@ body{
         height: 30px;
         position: absolute;
         top:10px;
-        right: 10px;
+        right: 20px;
       }
 
     }
