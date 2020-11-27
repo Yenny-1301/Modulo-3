@@ -87,7 +87,7 @@ export default {
   font-size: 60px;
 }
 .login{
-  height: 72vh;
+  height: 80vh;
 }
 img{
   border-radius: 50%;

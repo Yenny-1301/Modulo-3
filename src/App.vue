@@ -50,6 +50,7 @@ export default {
 body{
   margin: 0;
   padding: 0;
+  
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -59,6 +60,7 @@ body{
   // color: #0F5189 ;
   margin: 0;
   padding: 0;
+
 }
 
 #envoltorio {
@@ -66,6 +68,8 @@ body{
   padding: 0;
    width: 100%;
    height: 100vh;
+
+ 
     }
     Nav{
       margin: 0;

@@ -1,6 +1,10 @@
 <template>
   <div class="header">
       <h1 class="d-flex justify-content-center align-items-center pt-2 ">{{title}}</h1>
+      <img src="../assets/logo.png" alt="logo" class="logo d-none d-sm-inline">
+      <span class="d-none d-sm-inline d-lg-none abs ">NYSL</span>
+      <span class="d-none d-lg-inline abs">North Side Youth Soccer League</span>
+
         <template v-if="usuario!=null" >
           <img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle">
         </template>
@@ -27,6 +31,11 @@ export default {
       text-align: center;
       margin:0;
       height: 50px;
+  .abs{
+    position: absolute;
+    top: 15px;
+    left: 70px;
+  }
       
       h1{
         margin: 0;
@@ -46,7 +55,16 @@ export default {
         position: absolute;
         top:10px;
         right: 10px;
+        
+         &.logo{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top:3px;
+        left: 10px;
       }
+      }
+      
 }
 
 </style>
