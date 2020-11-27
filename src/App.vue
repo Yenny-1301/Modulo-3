@@ -8,7 +8,7 @@
       <footer>
         <section id="contact">
           <h3>Contact Us</h3>
-          <ul>
+          <ul class="degradado">
             <li><i class="fab fa-instagram"></i></li>
             <li><i class="fab fa-facebook-square"></i></li>
             <li><i class="fab fa-twitter-square"></i></li>
@@ -81,8 +81,6 @@ body{
     footer{
       section{
         border-top: 0.5px solid #7A7A7A;
-        color: #2E7D32;
-
          &#contact{
                h3{
                 margin: 0;
@@ -95,6 +93,10 @@ body{
                   margin-left: 0px;
                   display: flex;
                   justify-content: center;
+                  background: -webkit-linear-gradient( #2E7D32, #004983);
+                  -webkit-text-fill-color: transparent;
+                  -webkit-background-clip: text;
+
                   li{
                     padding: 2px;
                     list-style:none;

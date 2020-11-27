@@ -15,7 +15,7 @@
                 <b-col align-self="start">Time:{{time}}</b-col>
                 <b-col align-self="start">Direction: {{location}}</b-col> 
                 
-            <router-link to="/chat" class="btn b-blue btn-md mr-3 mt-2 mb-4 "><i class="fas fa-comment-dots"></i></router-link>
+            <router-link :to="'/chat/'+ indice"  class="btn b-blue btn-md mr-3 mt-2 mb-4 "><i class="fas fa-comment-dots"></i></router-link>
             <b-button v-b-toggle="'inner' + indice" size="md" class="mt-2 mb-4 b-blue"><i class="fas fa-map-marker-alt"></i></b-button>
             <b-collapse :id="'inner'+ indice" >
                 <iframe  class="d-sm-none" :src="mapSrc" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
