@@ -1,17 +1,9 @@
-<template>
-  <div id="app">
+<template >
+  <div id="app" >
     <div id="envoltorio">
-      <header >
-        <h1>Titulo</h1>
-        <template v-if="usuario!=null" >
-          <img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle">
-        </template>
-      </header>
-      <Nav></Nav>
+      <!-- <Nav></Nav> -->
       <main class="main-view">
-        <b-container fluid>
         <router-view/>
-        </b-container>
       </main>
       <footer>
         <section id="contact">
@@ -33,14 +25,14 @@
 </template>
 
 <script>
-import Nav from  '@/components/Nav.vue'
+// import Nav from  '@/components/Nav.vue'
 import {mapMutations, mapState} from 'vuex'
 
 export default {
   name:'App',
-  components:{
-    Nav,
-  },
+  // components:{
+  //   Nav
+  // },
   methods:{
     ...mapMutations(['listenUser'])
   },
@@ -74,42 +66,13 @@ body{
   padding: 0;
    width: 100%;
    height: 100vh;
-    
-    header{
-      width: 100%;
-      background: linear-gradient(to right, #2E7D32, #004983);
-      color: white;
-      font-size: 20px;
-      text-align: center;
-      margin:0;
-      h1{
-        margin: 0;
-        padding: 0;
-      }
-       .btn-menu{
-        color:white;
-        font-size: 30px;
-        position: absolute;
-        top:7px;
-        left: 10px;
-      }
-      img{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top:10px;
-        right: 20px;
-      }
-
     }
     Nav{
       margin: 0;
       padding: 0; 
     }
     main{
-      // height: 400px;
       width: 100%;
-      // height: 75vh;
     }
     footer{
       section{
@@ -158,7 +121,7 @@ body{
       }
      
 
-}
+
 
 </style>
 

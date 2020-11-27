@@ -21,9 +21,9 @@
   </div>
   <div class="landscape d-none d-sm-inline">
     <div class="logo d-flex justify-content-center align-items-center">
-        <img src="@/assets/logo.png" alt="logo">
-        <span class="ml-2">NYSL</span>
-        <span class="ml-2 d-none d-lg-inline">NorthSide Youth Soccer League</span>
+        <!-- <img src="@/assets/logo.png" alt="logo">
+        <span class="ml-2">NYSL</span> -->
+        <!-- <span class="ml-2 d-none d-lg-inline">NorthSide Youth Soccer League</span> -->
         </div>
     <b-row class="pt-2 ">
       <b-col cols="3" class="derecha"><router-link to="/">Home</router-link></b-col>
@@ -72,6 +72,7 @@ export default {
     left: 0px;
     width: 50px;
     height: 48px;
+    z-index: 10000;
     &:hover{
     background-color: rgba(0, 0, 0, 0.3);
 

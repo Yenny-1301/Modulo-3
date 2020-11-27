@@ -13,8 +13,10 @@
             <b-button v-b-toggle="'collapse' + indice"  variant="success"  class="mb-3 b-gradient rounded-circle">+</b-button>
             <b-collapse :id="'collapse' + indice" class="mt-2">
                 <b-col align-self="start">Time:{{time}}</b-col>
-                <b-col align-self="start">Direction: {{location}}</b-col>  
-            <b-button v-b-toggle="'inner' + indice" size="sm" class="mt-2 mb-4 ">Google Maps</b-button>
+                <b-col align-self="start">Direction: {{location}}</b-col> 
+                
+            <router-link to="/chat" class="btn b-blue btn-md mr-3 mt-2 mb-4 "><i class="fas fa-comment-dots"></i></router-link>
+            <b-button v-b-toggle="'inner' + indice" size="md" class="mt-2 mb-4 b-blue"><i class="fas fa-map-marker-alt"></i></b-button>
             <b-collapse :id="'inner'+ indice" >
                 <iframe  class="d-sm-none" :src="mapSrc" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <iframe  class="d-none d-sm-inline" :src="mapSrc" width="450" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -35,6 +37,11 @@ export default {
 <style scoped lang="scss">
 .b-green{
      background-color: #2E7D32;
+}
+.b-blue{
+   background-color:#005EA9 ;
+   border: 1px solid #005EA9;
+   color:white ;
 }
 .b-gradient{
       background: linear-gradient(to right, #2E7D32, #005EA9);

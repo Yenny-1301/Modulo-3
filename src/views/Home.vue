@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+  <Header title='Upcoming Events' ></Header>
+  <Nav></Nav>
+
     <div v-for="(element, index) of datos" :key="index">
        <Carrusel 
         :titulo ="element.titulo"
@@ -16,6 +19,8 @@
 // @ is an alias to /src
 
 import Carrusel from '@/components/Carrusel.vue'
+import Header from '@/components/Header.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   name: 'Home',
@@ -45,9 +50,12 @@ export default {
   },
   components:{
     Carrusel,
+    Header,
+    Nav
   }
 }
 </script>
 
 <style  scoped lang="scss">
+
 </style>

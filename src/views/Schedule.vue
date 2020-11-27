@@ -1,6 +1,9 @@
 <template>
   <div class="schedule">
-    <!-- <i class="fas fa-comment-dots"></i> -->
+    
+  <Header title='Schedule' ></Header>
+  <Nav></Nav>
+
     <div class="container ">
       <select name="select" class="m-0 p-0" v-model="monthSelected">
       <option value="All">Month</option> 
@@ -37,7 +40,9 @@
 <script>
 // @ is an alias to /src
 import Acordeon from '@/components/Acordeon.vue'
-// import Options from '@/components/Options.vue'
+import Header from '@/components/Header.vue'
+import Nav from '@/components/Nav.vue'
+
 
 export default {
   name: 'Schedule',
@@ -210,7 +215,9 @@ export default {
     }
   },
   components:{
-    Acordeon
+    Acordeon,
+    Header,
+    Nav
   },
   computed:{
     filtered: function(){
