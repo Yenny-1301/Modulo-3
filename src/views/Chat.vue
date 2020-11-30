@@ -8,23 +8,22 @@
 
       </template>
       <template v-else>
-          <div class="body">
-              <div v-for="(mensaje,indice) of mensajes" :key="indice">
-                  <p>
-                      <strong>{{mensaje.autor}} said:</strong> 
-                  </p>
-                  <p>
+          <div class="body d-flex flex-column align-items-center m-2">
+              <div v-for="(mensaje,indice) of messages" :key="indice" class="mensaje m-2">
+                  <p class="mt-3"><strong>{{mensaje.autor}} said:</strong></p>
+                  <p class="m-2">
                       {{mensaje.texto}}
                   </p>
-                
               </div>
-                <form @submit.prevent="post()">
+          </div>
+          <div>
+         <form @submit.prevent="post()">
                       <input type="text" placeholder="Write your message..." id="box" v-model="input">
                       <button type="submit">Send</button>
                   </form>
+          <router-link to="/schedule" class="btn btn-success mt-3 mb-2 mr-1 b-gradient rounded-circle"><i class="fas fa-arrow-left"></i></router-link>
           </div>
-          <router-link to="/schedule" class="btn btn-success mt-5"> Back</router-link>
-
+          
       </template>
   </div>
 </template>
@@ -38,18 +37,19 @@ export default {
     name:'Chat',
     data(){
         return{
-          mensajes:[{autor:'Juan Cruz',texto:'holi'}],
-          input:null
+        messages:[],
+        input:null
         }
     },
     methods:{
         post(){
-            let folder=db.ref('forum/match'+ this.$route.params.id);
+            let folder=db.ref('forum/match'+ this.$route.params.id)
 
             let message={
                 texto:this.input,
                 autor:this.usuario.displayName,
-                date: new Date()
+                imagen:this.usuario.photoURL,
+                date: new Date().toDateString()
             }
             folder.push(message)
             this.input=null;
@@ -57,6 +57,13 @@ export default {
     },
     computed:{
         ...mapState(['usuario'])
+    },
+    mounted(){
+        this.messages=[]
+        db.ref('forum/match'+ this.$route.params.id).on("child_added",(snapshot)=>{
+            this.messages.push(snapshot.val())
+        })
+
     },
     components:{
         Header
@@ -66,8 +73,45 @@ export default {
 
 <style lang="scss" scoped>
 .chat{
-    height: 70vh;
     width: 100%;
+    .mensaje{
+      background:rgba(0, 77, 153,0.9 );
+    box-shadow:  3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      margin-bottom: 0;
+      color: white;
+      width: 50%;     
+      border: 0;
+      &:hover{
+          background-color: rgba(0, 77, 153,0.7 );
+      }
+    }
+    #box{
+        // border-radius: 15px;
+        padding: 5px;
+        border: none;
+        border: 1px solid #707070;
+        border-right: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    } 
+    button{
+        padding: 6px;
+        border: none;
+        color: white;
+        background: linear-gradient(to right, #2E7D32, #005EA9);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    } 
+}
+.b-gradient{
+      background:#2E7D32 ;
+      &:hover{
+          background-color: #004983;
+          border-color: #004983;
+      }
+
 }
 
 </style>
+// linear-gradient(to right, #2E7D32, #004983)
