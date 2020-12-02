@@ -6,7 +6,9 @@
       <span class="d-none d-lg-inline abs">North Side Youth Soccer League</span>
 
         <template v-if="usuario!=null" >
-          <img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle">
+          <router-link to="/login"><img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle"></router-link>
+
+          
         </template>
   </div>
 </template>

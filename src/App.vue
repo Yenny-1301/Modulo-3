@@ -16,7 +16,7 @@
           </ul>
         </section>
         <section id="teamInfo">
-          <a href="#" class="left">Tlf: 1124564275 </a>
+          <a href="#" class="left">Tlf: (630) 690-8132 </a>
           <a href="#">Email: nysl@chisoccer.org</a>
         </section>
       </footer>

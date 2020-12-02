@@ -15,12 +15,12 @@
                 <b-col align-self="start">Time:{{time}}</b-col>
                 <b-col align-self="start">Direction: {{location}}</b-col> 
                 
-            <router-link :to="'/chat/'+ indice"  class="btn b-blue btn-md mr-3 mt-2 mb-4 "><i class="fas fa-comment-dots"></i></router-link>
-            <b-button v-b-toggle="'inner' + indice" size="md" class="mt-2 mb-4 b-blue"><i class="fas fa-map-marker-alt"></i></b-button>
-            <b-collapse :id="'inner'+ indice" >
-                <iframe  class="d-sm-none" :src="mapSrc" width="250" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <router-link :to="'/chat/'+ id"  class="btn b-blue btn-md mr-3 mt-2 mb-4 "><i class="fas fa-comment-dots"></i></router-link>
+            <b-button v-b-modal="'inner' + indice" size="md" class="mt-2 mb-4 b-blue"><i class="fas fa-map-marker-alt"></i></b-button>
+            <b-modal :id="'inner'+ indice" :title="location">
+                <iframe  class="d-sm-none" :src="mapSrc" width="310" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 <iframe  class="d-none d-sm-inline" :src="mapSrc" width="450" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </b-collapse>
+            </b-modal>
             </b-collapse>
         </b-col>
     </b-row>
@@ -30,7 +30,7 @@
 <script>
 export default {
     name:'Acordeon',
-    props:["day", "month","team1", "team2", "time","location", "indice","mapSrc"]
+    props:["day", "month","team1", "team2", "time","location", "indice","mapSrc", "id"]
 }
 </script>
 

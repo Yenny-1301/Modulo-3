@@ -30,6 +30,7 @@
    :indice="index"
    :time="object.time"
    :mapSrc="object.directionSrc"
+   :id="object.id"
   />
     </div>
   </div>
@@ -56,6 +57,7 @@ export default {
                 team2:"U4",
                 location:"AJ Katzenmaier",
                 time:"9:30 hs",
+                id:"1",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.656836443422!2d-87.6312603845582!3d41.900236679220434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x754eb9271a4a27fd!2sOgden%20Elementary%20School!5e0!3m2!1ses-419!2sar!4v1606339598840!5m2!1ses-419!2sar",
                 },
                 {
@@ -65,6 +67,7 @@ export default {
                 team2:"U2",
                 location:"Greenbay",
                 time:"13:00 hs",
+                id:"2",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb351205fae50c6f3!2sGreenbay%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339988098!5m2!1ses-419!2sar",
                 },
                 {
@@ -73,6 +76,7 @@ export default {
                 team1:"U5",
                 team2:"U6",
                 location:"Howard A Yeager",
+                id:"3",
                  directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5864786779157!2d-87.66530238455746!3d41.92324747921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b4d680e25a482e5!2sSt.%20Josaphat%20School!5e0!3m2!1ses-419!2sar!4v1606340752227!5m2!1ses-419!2sar",
                 time:"9:30pm",
                 },
@@ -82,6 +86,7 @@ export default {
                 team1:"U6",
                 team2:"U1",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.289839348977!2d-87.64816138455728!3d41.92962287921805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbff5d5dfcfcfa35!2sMarjorie%20P%20Hart%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339809160!5m2!1ses-419!2sar",
+                id:"4",
                 location:"Marjorie P Hart",
                 time:"13:00 hs"
                 },
@@ -91,6 +96,7 @@ export default {
                 team1:"U2",
                 team2:"U4",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3355487036233!2d-87.64831158455799!3d41.90714487921991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5736e62f19086c62!2sNorth%20Elementary!5e0!3m2!1ses-419!2sar!4v1606340221046!5m2!1ses-419!2sar",
+                id:"5",
                 location:"North",
                 time:"9:30 hs"
                 },
@@ -100,6 +106,7 @@ export default {
                 team1:"U3",
                 team2:"U5",
                 location:"AJ Katzenmaier",
+                id:"6",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.656836443422!2d-87.6312603845582!3d41.900236679220434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x754eb9271a4a27fd!2sOgden%20Elementary%20School!5e0!3m2!1ses-419!2sar!4v1606339598840!5m2!1ses-419!2sar",
                 time:"13:00 hs"
                 
@@ -110,6 +117,7 @@ export default {
                 team1:"U1",
                 team2:"U3",
                 location:"South",
+                id:"7",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.730653315668!2d-87.65286418455756!3d41.920148579218846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1caabcbc4893f0da!2sSt%20James%20Lutheran%20School!5e0!3m2!1ses-419!2sar!4v1606340535158!5m2!1ses-419!2sar",
                 time:"9:30 hs"
                 },
@@ -119,6 +127,7 @@ export default {
                 team1:"U2",
                 team2:"U6",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5864786779157!2d-87.66530238455746!3d41.92324747921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b4d680e25a482e5!2sSt.%20Josaphat%20School!5e0!3m2!1ses-419!2sar!4v1606340752227!5m2!1ses-419!2sar",
+                id:"8",
                 location:"Howard A Yeager",
                 time:"13:00 hs"
                 },
@@ -128,6 +137,7 @@ export default {
                 team1:"U4",
                 team2:"U5",
                 location:"Greenbay",
+                id:"9",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb351205fae50c6f3!2sGreenbay%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339988098!5m2!1ses-419!2sar",
                 time:"9:30 hs"
 
@@ -138,6 +148,7 @@ export default {
                 team1:"U2",
                 team2:"U5",
                 location:"Marjorie P Hart",
+                id:"10",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.289839348977!2d-87.64816138455728!3d41.92962287921805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbff5d5dfcfcfa35!2sMarjorie%20P%20Hart%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339809160!5m2!1ses-419!2sar",
                 time:"13:00 hs"
                 },
@@ -147,6 +158,7 @@ export default {
                 team1:"U1",
                 team2:"U6",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.730653315668!2d-87.65286418455756!3d41.920148579218846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1caabcbc4893f0da!2sSt%20James%20Lutheran%20School!5e0!3m2!1ses-419!2sar!4v1606340535158!5m2!1ses-419!2sar",
+                id:"11",
                 location:"South",
                 time:"9:30 hs"
                 },
@@ -156,6 +168,7 @@ export default {
                 team1:"U3",
                 team2:"U4",
                 location:"Howard A Yeager",
+                id:"12",
                  directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5864786779157!2d-87.66530238455746!3d41.92324747921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b4d680e25a482e5!2sSt.%20Josaphat%20School!5e0!3m2!1ses-419!2sar!4v1606340752227!5m2!1ses-419!2sar",
                 time:"13:00 hs"
                 },
@@ -165,6 +178,7 @@ export default {
                 team1:"U5",
                 team2:"U1",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022981686595!2d-87.64002218455776!3d41.913864679219344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb351205fae50c6f3!2sGreenbay%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339988098!5m2!1ses-419!2sar",
+                id:"13",
                 location:"Greenbay",
                 time:"9:30 hs"
                 },
@@ -174,6 +188,7 @@ export default {
                 team1:"U6",
                 team2:"U3",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.3355487036233!2d-87.64831158455799!3d41.90714487921991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5736e62f19086c62!2sNorth%20Elementary!5e0!3m2!1ses-419!2sar!4v1606340221046!5m2!1ses-419!2sar",
+                id:"14",
                 location:"North",
                 time:"13:00 hs"
                 },
@@ -183,6 +198,7 @@ export default {
                 team1:"U2",
                 team2:"U4",
                 location:"Marjorie P Hart",
+                id:"15",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.289839348977!2d-87.64816138455728!3d41.92962287921805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbff5d5dfcfcfa35!2sMarjorie%20P%20Hart%20Elementary!5e0!3m2!1ses-419!2sar!4v1606339809160!5m2!1ses-419!2sar",
                 time:"9:30 hs"
                 },
@@ -192,6 +208,7 @@ export default {
                 team1:"U3",
                 team2:"U1",
                 location:"AJ Katzenmaier",
+                id:"16",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.656836443422!2d-87.6312603845582!3d41.900236679220434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x754eb9271a4a27fd!2sOgden%20Elementary%20School!5e0!3m2!1ses-419!2sar!4v1606339598840!5m2!1ses-419!2sar",
                 time:"13:00 hs"
                 },
@@ -201,6 +218,7 @@ export default {
                 team1:"U5",
                 team2:"U6",
                 directionSrc:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.5864786779157!2d-87.66530238455746!3d41.92324747921862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b4d680e25a482e5!2sSt.%20Josaphat%20School!5e0!3m2!1ses-419!2sar!4v1606340752227!5m2!1ses-419!2sar",
+                id:"17",
                 location:"Howard A Yeager",
                 time:"9:30 hs"
 
@@ -234,6 +252,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.schedule{
+  min-height: 80vh;
+}
 $base-color: #2E7D32;
 .container {
   display: flex;
