@@ -5,9 +5,10 @@
       <main class="main-view">
         <router-view/>
       </main>
-      <footer>
+      <template v-if="$route.path != 'chat'">
+         <footer>
         <section id="contact">
-          <h3>Contact Us</h3>
+          <h3 class="mt-1">Contact Us</h3>
           <ul class="degradado">
             <li><i class="fab fa-instagram"></i></li>
             <li><i class="fab fa-facebook-square"></i></li>
@@ -17,9 +18,11 @@
         </section>
         <section id="teamInfo">
           <a href="#" class="left">Tlf: (630) 690-8132 </a>
-          <a href="#">Email: nysl@chisoccer.org</a>
+          <a href="mailto:nysl@chisoocer.org?subject=NYSL20%Information">nysl@chisoocer.org</a>
         </section>
       </footer>
+      </template>
+     
     </div>
   </div>
 </template>
@@ -57,7 +60,6 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  // color: #0F5189 ;
   margin: 0;
   padding: 0;
 
@@ -77,6 +79,7 @@ body{
     }
     main{
       width: 100%;
+      min-height: 83vh;
     }
     footer{
       section{
@@ -85,7 +88,7 @@ body{
                h3{
                 margin: 0;
                 padding: 0;
-                font-size: 20px;
+                font-size: 1em;
                   }
                 ul{
                   margin: 2px;
@@ -100,7 +103,7 @@ body{
                   li{
                     padding: 2px;
                     list-style:none;
-                    font-size: 40px;
+                    font-size: 2em;
                   }
                 }
             }
@@ -109,7 +112,6 @@ body{
         display: flex;
         justify-content: center;
          a{
-           text-decoration: none;
            color: #7A7A7A;
            margin-top: 5px;
            
@@ -117,11 +119,9 @@ body{
            border-right: 1px solid #7A7A7A;
            margin-right: 5px;
            padding-right: 5px;;
-         }
-           
-         }
-         
-      }
+             }
+           }
+        }
     }
 
       }

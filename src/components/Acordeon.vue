@@ -1,6 +1,7 @@
 <template>
   <div class="acordeon">
-    <b-row class="m-2 mb-3 alto p-4 "> 
+      <b-container>
+           <b-row class="m-2 mb-3 alto p-4 "> 
         <b-col cols="12" text-variant="success" ><h2>{{day}}</h2></b-col>
         <b-col cols="5">
             <h3 >{{team1}}</h3></b-col>
@@ -24,6 +25,8 @@
             </b-collapse>
         </b-col>
     </b-row>
+      </b-container>
+   
 </div>
 </template>
 

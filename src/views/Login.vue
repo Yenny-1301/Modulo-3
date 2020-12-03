@@ -18,13 +18,13 @@
     </template>
     <template v-else>
         <div class="cont  d-flex flex-column justify-content-center aling-items-center ">
+          <div class="mt-3">
+            <img :src="usuario.photoURL" :alt="usuario.displayName" class="mb-3">
+            <h2>Welcome {{usuario.displayName}}</h2>
+          </div>
           <div>
-        <img :src="usuario.photoURL" :alt="usuario.displayName" class="mb-3">
-        <h2>Welcome {{usuario.displayName}}</h2>
-       </div>
-      <div>
-        <b-button class="b-gradient" @click="logOut()">Longout</b-button>
-      </div>
+            <b-button class="b-gradient mb-3" @click="logOut()">Longout</b-button>
+          </div>
         </div>
       
     </template>
@@ -91,6 +91,7 @@ export default {
 }
 img{
   border-radius: 50%;
+  width: 5em;
 }
 .nulluser{
   width: 100px;

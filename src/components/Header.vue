@@ -7,8 +7,6 @@
 
         <template v-if="usuario!=null" >
           <router-link to="/login"><img :src="usuario.photoURL" alt="foto del usuario" class="rounded-circle"></router-link>
-
-          
         </template>
   </div>
 </template>
@@ -59,10 +57,10 @@ export default {
         right: 10px;
         
          &.logo{
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         position: absolute;
-        top:3px;
+        top:4px;
         left: 10px;
       }
       }

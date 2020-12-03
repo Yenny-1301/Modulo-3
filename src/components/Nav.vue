@@ -1,37 +1,28 @@
 <template>
 <div>
  <div class="container d-sm-none">
-        <div @click="showNav=!showNav" class="menu">
-         <i class="fas fa-bars"></i>
-        </div>
+        <div @click="showNav=!showNav" class="menu"><i class="fas fa-bars"></i></div>
         <div id="nav" :class="{showNav:showNav, hideNav:!showNav}">
         <div class="logo">
-        <img src="@/assets/logo.png" alt="logo">
-        <div><h4>NYSL</h4></div>
+            <img src="@/assets/logo.png" alt="logo">
+            <div><h4>NYSL</h4></div>
         </div>
     <ul>
-      
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/schedule">Schedule</router-link></li>
       <li><router-link to="/login">Login</router-link></li>
-      
-    </ul>
+      </ul>
         </div>    
   </div>
   <div class="landscape d-none d-sm-inline">
-    <div class="logo d-flex justify-content-center align-items-center">
-        <!-- <img src="@/assets/logo.png" alt="logo">
-        <span class="ml-2">NYSL</span> -->
-        <!-- <span class="ml-2 d-none d-lg-inline">NorthSide Youth Soccer League</span> -->
-        </div>
-    <b-row class="pt-2 ">
-      <b-col cols="3" class="derecha"><router-link to="/">Home</router-link></b-col>
-      <b-col cols="3" class="derecha"><router-link to="/about">About</router-link></b-col>
-      <b-col cols="3" class="derecha"><router-link to="/schedule">Schedule</router-link></b-col>
-      <b-col cols="3"><router-link to="/login">Login</router-link></b-col>
-    </b-row>
-  </div>
+     <div class="d-flex bd-highlight">
+      <div class="flex-fill bd-highlight derecha "><router-link to="/">Home</router-link></div>
+      <div class="flex-fill bd-highlight derecha"><router-link to="/about">About</router-link></div>
+      <div class="flex-fill bd-highlight derecha"><router-link to="/schedule">Schedule</router-link></div>
+      <div class="flex-fill bd-highlight"><router-link to="/login">Login</router-link></div>
+    </div>
+    </div>
 </div>
  
 </template>
@@ -151,28 +142,24 @@ export default {
     }
   }
   
-  .row{
+  .d-flex{
       background: linear-gradient(to right, #2E7D32, #004983);
-      .col-3{
+      div{
+        text-decoration: none;
          &:hover{
         background-color: rgba(255,255,255,0.3);
-      }
-      }
-       
+         }
+      }  
     .derecha{
       border-right: 1px solid white ;
-      
-    }
+     }
      a{
-          color:white;
-      
-       &.router-link-exact-active{
+       color:white;
+      &.router-link-exact-active{
         color:#9CC99F ;
-
-      }
         }
-   
-  }
+      }
+   }
  
 }
 
